@@ -1,0 +1,412 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+html{
+    background-image: url(images/fond3.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-attachment: scroll;
+}
+body{
+    backdrop-filter: blur(10px);
+    font-family: "Trebuchet MS", mp-trebuchet;
+    color: #2f0a0c;
+    /* padding-bottom: 50px; */
+}
+#main{
+    width: 1200px;
+    position: relative;
+    left: 50%;
+    top: 25px;
+    transform: translateX(-50%);
+    border: 0px solid black;
+    box-shadow: 0 0 20px 20px rgba(100, 100, 100, 0.192), inset 0 0 10px rgba(77, 77, 77, 0.133);
+    border-radius: 40px;
+    padding: 40px 80px;
+    background-color: rgba(99, 97, 97, 0.333);
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+header #logo , footer #logo_footer{ line-height: 25px;}
+header #logo p, footer #logo_footer p{
+    font-size: 1.8em;
+    font-family: mp-arial;
+    font-weight: 900;
+}
+header #logo p span, footer #logo_footer p span{
+    font-size: .7em;
+    font-family: mp-gilc;
+    letter-spacing: .9px;
+    font-weight: 500;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+nav a{
+    margin-right: 20px;
+    margin-left: 20px;
+    text-decoration: none;
+    color: #2f0a0c;
+    font-weight: 900;
+    transition: all .3s;
+    position: relative;
+}
+nav a::after{
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 0;
+    background-color: #2f0a0c;
+    opacity: 0;
+    transition: all .3s;
+}
+nav div{ transition: all .3s; }
+nav div:last-of-type:hover{ transform: scale(1.2); }
+nav a:hover::after{
+    opacity: 1;
+    width: 100%;
+}
+/* nav a:hover{
+    border-bottom: 4px solid #2f0a0c;
+} */
+nav #coffe_shop{
+    color: #fffa;
+    background-color: #2f0a0c;
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+nav #coffe_shop:hover::after{
+    display: none;
+}
+nav #coffe_shop:hover{
+    box-shadow: 0 0 10px 2px #2f0a0c;
+}
+
+section #section_header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section h1{
+    font-size: 3em;
+    margin-bottom: 50px;
+}
+section #view_more a, #before_footer #contact{
+    color: #fffa;
+    font-weight: 900;
+    background-color: #2f0a0c;
+    border-radius: 30px;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 50px 20px 20px 20px;
+    transition: all .3s;
+    box-shadow: 5px 3px 20px 3px #160505;
+}
+section #view_more a:hover, #before_footer #contact:hover{
+    text-decoration: underline;
+    box-shadow: 0 0 20px 3px #160505;
+}
+section #icons{
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+section #icons svg{
+    margin-right: 40px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #fffb;
+    cursor: pointer;
+}
+
+section #img1 img{
+    width: 400px;
+    height: 400px;
+    margin-right: 100px;
+    filter: drop-shadow(0 0 20px #222);
+}
+
+
+#section img{
+    width: 150px;
+    height: 150px;
+}
+
+#section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 150px;
+}
+#section #article3{
+    width: 500px;
+}
+#section #article1 , #section #article2{
+    border: 0px solid red;
+    background-color: #fff7;
+    border-radius: 30px;
+    padding: 20px;
+    position: relative;
+    padding-top: 80px;
+    width: 250px;
+}
+#section #article1 img, #section #article2 img{
+    position: absolute;
+    left: 50%;
+    top: -75px;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 0 20px #222);
+}
+
+#section #article1 svg, #section #article2 svg{
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #fffb;
+    cursor: pointer;
+    margin-top: 20px;
+}
+#section .icons1{
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#section .prix{
+    color: #fffa;
+    font-weight: 900;
+    background-color: #2f0a0c;
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: inline;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#section1 #tasse_graine{
+    position: relative;
+}
+#section1 #tasse_graine #prix2{
+    position: absolute;
+    right: 30px;
+    top: 50px;
+    padding: 20px;
+    background-color: #fffa;
+    border-radius: 15px;
+}
+#section1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#section1 #caffe_graine{
+    transform: scale(.8);
+    filter: drop-shadow(0 0 20px #222);
+}
+#section1 a , #section #article3 a{
+    color: #fffa;
+    background-image: linear-gradient(90deg, #2f0a0c, #744f51);
+    text-decoration: none;
+    padding: 10px 20px;
+    position: relative;
+    top: 40px;
+    border-radius: 20px;
+}
+#section1 a:hover, #section #article3 a:hover{
+    background: #2f0a0c;
+}
+
+
+
+#section2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#section2 .responsive_phone{
+    height: 700px;
+    width: 320px;
+    border: 0px solid #222;
+    margin-right: 30px;
+    border-radius: 20px;
+    background-color: transparent;
+    box-shadow: 0 0 30px 1px #222;
+    position: relative;
+}
+#section2 #responsive_phone1{
+    background-image: url(images/respo1.png);
+    background-position: center;
+    background-size: 320px 700px;
+}
+#section2 #responsive_phone2{
+    background-image: url(images/respo2.png);
+    background-position: center;
+    background-size: 320px 700px;
+}
+#section2 #app{
+    width: 350px;
+}
+#section2 #add_to_card{
+    position: absolute;
+    bottom: 10px;
+    right: -20px;
+    background-color: #2f0a0c;
+    padding: 5px 10px;
+    border-radius: 30px;
+    color: #fffe;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    font-size: .8em;
+}
+#section2 #add_to_card svg{
+    background-color: #fff5;
+    padding: 5px;
+    border-radius: 50%;
+}
+#section2 #grainnes_2{
+    transform: scale(.4);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 5;
+}
+#section2 #grainssss{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 450px;
+    height: 450px;
+}
+#section2 #app svg{
+    margin-right: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #fffb;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#before_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    margin-bottom: 60px;
+}
+#before_footer span{
+    color: white;
+    font-size: .8em;
+}
+
+hr{ 
+    height: 1px; 
+    margin-bottom: 40px;
+}
+
+#text_footer{
+    width: 60%;
+    font-size: 1em;
+    line-height: 30px;
+    padding: 10px;
+    border: 0px solid red;
+    font-weight: 400;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: top;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+footer #logo_footer p span, footer #logo_footer p{
+    color: white;
+}
+footer .ff{
+    line-height: 40px;
+    padding: 0 20px;
+    border-right: 2px solid #2f0a0c;
+}
+footer .ff:last-of-type{
+    border-right-width: 0;
+}
+footer .ff li{
+    list-style-type: none;
+}
+footer .ff li a{
+    text-decoration: none;
+    color: #2f0a0c;
+}
+footer .ff li a:hover{
+    text-decoration: underline;
+}
+footer #logo_footer{
+    padding: 0 20px;
+    border-right: 2px solid #2f0a0c;
+}
+
+#grain_de_cafe{
+    position: fixed;
+    bottom: -25px;
+    left: -150px;
+}
+
+#icons_responsive{
+    display: none;
+}
+
+/* hover svg */
+#section2 #add_to_card svg, 
+#section #article1 svg, 
+#section #article2 svg, 
+section #icons svg,
+#section2 #app svg{
+    transition: all .3s;
+}
+#section2 #add_to_card svg:hover, 
+#section #article1 svg:hover, 
+#section #article2 svg:hover, 
+section #icons svg:hover,
+#section2 #app svg:hover{
+    background-color: transparent;
+    transform: scale(1.5) rotate(0deg);
+}
+
+#section2 #add_to_card svg:active, 
+#section #article1 svg:active, 
+#section #article2 svg:active, 
+section #icons svg:active,
+#section2 #app svg:active{
+    transform: scale(1.2);
+}
+
+#copyright{
+    text-align: center;
+    color: #222a;
+    font-size: .7em;
+    margin-top: 40px;
+}
+

@@ -1,0 +1,175 @@
+
+/* ------ Responsive Design ---------- */
+
+@media screen and (max-width: 1400px) {
+    #main{ width: auto; }
+}
+@media screen and (max-width: 1300px) {
+    #section{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    #section #article3{
+        margin-top: 50px;
+        width: 70%;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    #section2{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 100px;
+    }
+    #section2 #app{
+        margin-top: 30px;
+        width: auto;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 1100px) {
+    nav a{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    section #section_header{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    section #img1{
+        display: none;
+    }
+    section #section_header h1 span{
+        font-size: 2em;
+        text-shadow: 0 0 5px #2f0a0c;
+    }
+    section #section_header #icons{
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    section #icons svg{
+        margin-right: 0;
+        margin: 20px;
+    }
+    #section1{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+    }
+    #section1 #p{
+        width: 70%;
+        text-align: center;
+        margin-bottom: 200px;
+    }
+    #section1 #tasse_graine #caffe_graine{
+        width: 400px;
+        height: 300px;
+    }
+    #section2{ margin-top: 20px; }
+}
+@media screen and (max-width: 955px) {
+    #section2 .responsive_phone{
+        margin-bottom: 30px;
+    }
+    header nav { display: none; }
+    #main { backdrop-filter: blur(20px); }
+    body{ backdrop-filter: unset; }
+    #icons_responsive svg{ cursor: pointer; }
+    #icons_responsive{
+        z-index: 20;
+        display: unset;
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 95%;
+        background-color: #2f0a0c;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 20px;
+        border-radius: 50px;
+    }
+}
+@media screen and (max-width: 780px){
+    #text_footer{
+        width: auto;
+    }
+    #before_footer{
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    footer .ff, footer .ff:last-of-type{
+        border-bottom: 2px solid #2f0a0c;
+        border-right-width: 0px;
+        padding-left: 0;
+    }
+    footer #logo_footer{ border-right: 0; }
+    #main{ top: 0; }
+    #section{ flex-direction: column; }
+    #section #article1{
+        margin-bottom: 100px;
+    }
+}
+@media screen and (max-width: 540px) {
+    #section2{ 
+        justify-content: center;
+        align-items: center;
+    }
+    #section2 .responsive_phone{
+        position: relative;
+        width: 200px;
+        height: 400px;
+        margin-right: 10px;
+    }
+    #section2 #responsive_phone1, #section2 #responsive_phone2{
+        background-size: 200px 400px;
+    }
+    #section2 #grainssss{
+        width: 200px;
+        height: 200px;
+    }
+    #section2 #grainnes_2{
+        transform: unset;
+        width: 60%;
+        height: 30%;
+        left: 50%;
+        top: 60%;
+        position: relative;
+    }
+    #main{ padding: 20px; }
+    footer{ margin-bottom: 100px; }
+    #copyright{ margin-bottom: 50px; }
+}
+@media screen and (max-width: 420px) {
+    #section1 #tasse_graine{ width: auto; }
+    #section1 #tasse_graine #caffe_graine{
+        width: 80%;
+        height: 80%;
+    }
+    #section #article1, #section #article2{ width: auto; }
+    #icons_responsive{ width: 90%; }
+    #section .icons1 { width: auto; }
+    section #section_header #icons{
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    section #section_header #icons svg{ margin: 5px; }
+}
+@media screen and (max-width: 315px) {
+    section #section_header #icons{ width: 180px; }
+    section h1{
+        font-size: 1.5em;
+    }
+}
